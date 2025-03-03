@@ -13,3 +13,13 @@ revenueCard.innerHTML = `
 `
 
 dashboardById.appendChild(revenueCard)
+
+// Task 2: Updating Dashbaord Metrics - Working with NodeLists and Arrays
+const allCards = document.querySelectorAll("metric-card")
+const allCardsArray = [...allCards]
+
+allCardsArray.forEach(card => {
+    const revenue = card.querySelector("h3")
+    revenue.innerText += " - Refreshed"
+    card.style.backgroundColor = "lime"
+})
