@@ -48,3 +48,16 @@ function addListItem(productName) {
     })
     inventoryList.appendChild(listItem)
 }
+
+// Task 4: Business Customer Section - Handling Event Bubbling
+const customerSection = document.getElementById("customerSection")
+customerSection.addEventListener("click", () => {
+    console.log("Customer section clicked.")
+})
+
+const customerCard = document.querySelectorAll(".customer-card")
+customerCard.forEach(card => {
+card.addEventListener("click", (c) => {
+    console.log("Customer card clicked.")
+    c.stopPropagation()
+})})
